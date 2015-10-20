@@ -1,0 +1,390 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+::selection {
+  background: #3b7aa3;
+  /* Safari */
+}
+::-moz-selection {
+  background: #3b7aa3;
+  /* Firefox */
+}
+.content {
+  min-height: 30em;
+  padding: 0 0 2em;
+}
+hr {
+  height: .05em;
+  border: none;
+  background: #ccc;
+}
+img {
+  max-width: 100%;
+}
+.mobile-only {
+  display: none;
+}
+
+body {
+  background: #ffffff;
+  font: 1em ff-meta-web-pro, helvetica, arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: freight-text-pro, Times, serif;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-bottom: .1em;
+}
+h1,
+.h1 {
+  color: white;
+  font-size: 2.5em;
+}
+h2,
+.h2 {
+  color: white;
+  font-size: 2.25em;
+}
+h3,
+.h3 {
+  font-size: 1.75em;
+}
+h4,
+.h4 {
+  font-size: 1.25em;
+}
+dt {
+  font-weight: bold;
+}
+p,
+li,
+dd,
+dt {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+dt {
+  margin-top: 1.75em;
+  margin-bottom: 0;
+}
+dt img {
+  display: block;
+}
+li {
+  margin-bottom: .75em;
+}
+p,
+dl {
+  max-width: 38em;
+}
+/* Interactions */
+dd,
+dt:first-child,
+p:last-child,
+li:last-child,
+dd:last-child {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+ul ul {
+  margin-left: 1em;
+}
+p + h4 {
+  margin-top: 1em;
+}
+a:link,
+a:visited,
+a:active {
+  color: #8cbec2;
+}
+a:hover {
+  color: #a3643b;
+}
+.mask {
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url(../img/poster-session.png);
+  height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat;
+  background-color: #eee;
+  background-position: top;
+}
+.mask img {
+  display: none;
+}
+.logo {
+  position: absolute;
+  top: 1em;
+  width: 8em;
+}
+.info .subtitle {
+  font-family: ff-meta-web-pro, helvetica, arial, sans-serif;
+}
+
+@media only screen {
+  .container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body::after {
+    display: block;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #eee;
+    content: ' ';
+  }
+  .mask,
+  .logo,
+  .info {
+    z-index: 2;
+  }
+  .info {
+    position: absolute;
+    top: 0;
+    left: 2em;
+    right: 4em;
+    box-sizing: border-box;
+  }
+  .info li {
+    color: white;
+    display: inline-block;
+    list-style-type: none;
+  }
+  .info li:nth-child(1)::after,
+  li:nth-child(2)::after,
+  li:nth-child(3)::after {
+    padding-right: .5em;
+    padding-left: .5em;
+    content: "|";
+  }
+  section:nth-child(3) h2 {
+    color: #3b7aa3;
+  }
+  section:nth-child(4) h2 {
+    color: #911e1c;
+  }
+  section:nth-child(5) h2 {
+    color: #65408b;
+  }
+  section:nth-child(6) h2 {
+    color: #152a5b;
+  }
+  section:nth-child(7) h2 {
+    color: black;
+  }
+}
+@media only screen and (max-width: 40em) {
+  .mask {
+    height: auto;
+    height: 26vw;
+    padding: 2em 0;
+  }
+  section {
+    padding: 3em 5% 0;
+  }
+  .info {
+    position: static;
+    padding-top: 1.25em;
+    padding-bottom: .75em;
+  }
+  .info p {
+    color: black;
+  }
+  .info .description,
+  .info ul {
+    text-align: center;
+    line-height: 1.5em;
+    width: auto;
+    float: none;
+  }
+  .info li {
+    color: black;
+  }
+  .info .subtitle {
+    display: none;
+  }
+  h2 {
+    font-size: 1.75em;
+  }
+
+}
+@media only screen and (min-width: 40em) {
+  .info {
+    padding-top: 10em;
+  }
+  .info p,
+  .info ul {
+    text-align: right;
+    float: right;
+    clear: right;
+  }
+  .info p {
+    color: #fff;
+    width: 15em;
+    font-size: 1.25em;
+  }
+  .info .subtitle {
+    position: absolute;
+    bottom: 0.5em;
+    right: 0;
+  }
+  .right_section {
+    max-width: 35em;
+    width: 62%;
+    box-sizing: border-box;
+    margin-top: 4em;
+    padding-right: 2em;
+    float: right;
+    overflow: visible;
+  }
+  .right_section h2 {
+    position: absolute;
+    left: .8888em;
+    width: 33%;
+    padding-right: .8888em;
+  }
+}
+@media only screen and (min-width: 40em) and (max-width: 54em) {
+  .mask,
+  .info,
+  body::after {
+    height: 24em;
+  }
+  body {
+    line-height: 1.5;
+  }
+  .info p {
+    width: 13em;
+  }
+}
+@media only screen and (min-width: 54em) {
+  html {
+    font-size: 1.25em;
+  }
+  body {
+    line-height: 1.6;
+  }
+  .mask,
+  .info,
+  body::after {
+    height: 23em;
+  }
+}
+@media only screen and (min-width: 70em) {
+  html {
+    font-size: 1.56em;
+  }
+  body {
+    line-height: 1.75;
+  }
+  .mask,
+  .info,
+  body::after {
+    height: 25em;
+  }
+}
+
+@media print {
+  @page {
+    margin: 1in 0.5in;
+  }
+  body {
+    color: #222;
+  }
+  .intro {
+    width: 4in;
+    margin-left: 4in;
+    margin-top: 0;
+    position: static;
+    text-align: right;
+  }
+  .logo {
+    width: 2in !important;
+    margin: 0 !important;
+    top: 0;
+  }
+  .description {
+    margin: 1.5in 0 0.25in;
+    float: right;
+    font-size: 24pt !important;
+    text-align: right;
+    width: 3.25in;
+    padding: 0.25in 0 0.25in 0.125in;
+  }
+  .subtitle {
+    font-size: 36pt !important;
+    margin-top: 2in;
+  }
+  .info ul {
+    font-size: 20pt !important;
+    text-align: right;
+  }
+  .info ul li {
+    margin-bottom: 0;
+  }
+  section {
+    margin: 1in 0 0 0;
+    padding: 0;
+  }
+  .interactive {
+    display: none;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .mask {
+    display: block;
+    float: left;
+    width: 4in;
+    margin-top: .75in;
+    height: 8in;
+    position: relative;
+  }
+  .mask img {
+    display: block;
+    position: absolute;
+  }
+  .event_details::after {
+    height: 2.35in;
+    margin-top: 1in;
+    margin-left: 0.5in;
+    top: -1.8in;
+    left: 3in;
+    content: "tup";
+  }
+  .event_details {
+    position: static;
+    overflow: hidden;
+    font-family: "inconsolataregular", "Helvetica";
+    font-size: 110pt !important;
+    line-height: .85;
+    transform: rotate(-65deg);
+    -webkit-transform: rotate(-65deg);
+    -moz-transform: rotate(-65deg);
+    margin-top: 3.5in;
+    margin-left: .4in;
+    width: 4in;
+  }
+  .who,
+}
+
