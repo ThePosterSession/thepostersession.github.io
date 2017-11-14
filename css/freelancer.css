@@ -78,6 +78,10 @@ span.text-primrary {
 .img-centered {
   margin: 0 auto; }
 
+.team-member {
+  text-align: center;
+}
+
 section {
   padding: 100px 0; }
   section h2 {
