@@ -90,7 +90,8 @@ section {
 
 section.success {
   color: white;
-  background: #232323; }
+  background: #232323; 
+}
 
 @media (max-width: 767px) {
   section {
@@ -427,11 +428,11 @@ footer {
   border-color: #50adfc;
   background-color: #50adfc; }
   .btn-success.focus, .btn-success:focus {
-    color: white;
+    color: #50adfc;
     border-color: #0a4b3e;
     background-color: #128f76; }
   .btn-success:hover {
-    color: white;
+    color: #50adfc;
     border-color: #11866f;
     background-color: #128f76; }
   .btn-success.active, .btn-success:active,
